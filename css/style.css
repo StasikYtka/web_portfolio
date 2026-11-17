@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f8f7fc;
+    color: #353044;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ВЕРХ HEADER */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #eae5f2;
+}
+
+.header a {
+    color: #353044;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header a:hover {
+    color: #9278c8;
+}
+
+/* Основные разделы */
+.aboutme, .works, .contacts {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 30px;
+}
+
+h1 {
+    margin: 0 0 25px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    margin: 35px 0 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+p {
+    margin: 12px 0;
+}
+
+/* Обо мне */
+.aboutme {
+    padding-top: 70px;
+}
+
+.aboutme h1 {
+    color: #9278c8;
+}
+
+.aboutme p {
+    max-width: 600px;
+    color: #797487;
+    font-size: 18px;
+}
+
+.aboutme .box {
+    margin-top: 45px;
+    padding: 35px 40px;
+    background: #ffffff;
+    border: 1px solid #eae5f2;
+    border-radius: 24px;
+}
+
+.aboutme .box h2:first-child {
+    margin-top: 0;
+}
+
+.aboutme-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.aboutme-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.aboutme-text h1 {
+    color: #9278c8;
+}
+
+.aboutme-text p {
+    color: #797487;
+    font-size: 18px;
+}
+
+.aboutme-photo {
+    width: 260px;
+    height: 320px;
+    flex-shrink: 0;
+    padding: 8px;
+    background: #eee8fa;
+    border-radius: 25px;
+    transform: rotate(3deg);
+    transition: transform 0.3s;
+}
+
+.aboutme-photo:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.aboutme-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 19px;
+}
+
+/* Списки */
+.aboutme li {
+    position: relative;
+    list-style: none;
+    padding: 8px 0 8px 25px;
+}
+
+.aboutme ul {
+    margin: 0;
+    padding: 0;
+}
+
+.aboutme li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #9278c8;
+}
+
+/* Работы */
+.works {
+    padding-top: 45px;
+}
+
+.works h1, .contacts h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.works h2 {
+    margin-top: 55px;
+}
+
+.works .box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Изображения */
+.image {
+    aspect-ratio: 4 / 4;
+    overflow: hidden;
+    background: #eee8fa;
+    border: 1px solid #eae5f2;
+    border-radius: 18px;
+    transition: transform 0.3s;
+}
+
+.image:hover {
+    transform: translateY(-6px);
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.image:hover img {
+    transform: scale(1.05);
+}
+
+/* Контакты */
+.contacts {
+    text-align: center;
+}
+
+.contacts ul {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #eae5f2;
+    border-radius: 24px;
+    list-style: none;
+}
+
+.contacts li {
+    padding: 12px 0;
+}
+
+/* Подвал */
+.footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: #eee8fa;
+    color: #797487;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0;
+}
